@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/primerPlatFragment">
+
+    <fragment
+        android:id="@+id/primerPlatFragment"
+        android:name="com.joelpigem.appprecafeteria.PrimerPlatFragment"
+        android:label="PrimerPlatFragment" >
+        <action
+            android:id="@+id/action_primerPlatFragment_to_begudaFragment"
+            app:destination="@id/begudaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/begudaFragment"
+        android:name="com.joelpigem.appprecafeteria.BegudaFragment"
+        android:label="BegudaFragment" >
+        <action
+            android:id="@+id/action_begudaFragment_to_totalFragment"
+            app:destination="@id/totalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/totalFragment"
+        android:name="com.joelpigem.appprecafeteria.TotalFragment"
+        android:label="TotalFragment" />
+</navigation>
