@@ -24,32 +24,29 @@ class TotalFragment : Fragment() {
         viewModel.calcularPreuTotal()
 
 
-        val textPrimerPlat = viewModel.primerPlat.quantitat.toString() + " " + viewModel.primerPlat.nom + " " + viewModel.preuTotalPrimerPlat.toString() + "€"
+        /*val textPrimerPlat = viewModel.primerPlat.quantitat.toString() + " " + viewModel.primerPlat.nom + " " + viewModel.preuTotalPrimerPlat.toString() + "€"
         val textBeguda = viewModel.beguda.quantitat.toString() + " " + viewModel.beguda.nom + " " + viewModel.preuTotalBeguda.toString() + "€"
         val textTotal = viewModel.preuTotal.toString() + "€"
 
         binding.textViewPreuPrimerPlat.text = textPrimerPlat
         binding.textViewPreuBeguda.text = textBeguda
-        binding.textViewPreuTotal.text = textTotal
+        binding.textViewPreuTotal.text = textTotal*/
 
 
-        /* viewModel.primerPlat.observe(viewLifecycleOwner) { primerPlat ->
-            viewModel.calcularPreuTotal()
-            val textPrimerPlat = primerPlat.nom + " " + viewModel.preuTotalPrimerPlat.value.toString() + "€"
-            binding.textViewPreuPrimerPlat.text = "prova"
+         viewModel.primerPlat.observe(viewLifecycleOwner) { primerPlat ->
+            val textPrimerPlat = primerPlat.quantitat.toString() + " " +  primerPlat.nom + " " + viewModel.preuTotalPrimerPlat.value.toString() + "€"
+            binding.textViewPreuPrimerPlat.text = textPrimerPlat
         }
 
         viewModel.beguda.observe(viewLifecycleOwner) { beguda ->
-            viewModel.calcularPreuTotal()
-            val textBeguda = beguda.nom + " " + viewModel.preuTotalBeguda.value.toString() + "€"
+            val textBeguda = beguda.quantitat.toString() + " " + beguda.nom + " " + viewModel.preuTotalBeguda.value.toString() + "€"
             binding.textViewPreuBeguda.text = textBeguda
         }
 
         viewModel.preuTotal.observe(viewLifecycleOwner) { preuTotal ->
-            viewModel.calcularPreuTotal()
             binding.textViewPreuTotal.text = preuTotal.toString() + "€"
         }
-*/
+
         return binding.root
     }
 
